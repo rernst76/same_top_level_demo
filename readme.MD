@@ -39,3 +39,19 @@ from src.func1 import function1
 
 Because in the current structure `src` and `tests` are being treated as two entirely
 separate packages.
+
+### Modifying structure to allow relative imports
+
+In order to use relative imports, we need to put the `src` and `tests`
+packages in a containing packages. Let's make an `app` package.
+
+We do this by creating a containing folder and adding an `__init__.py` file.
+
+Then we have two options to run pytest:
+
+- cd into the app folder: `cd app && pytest`
+- tell pytest to run in app: `pytest app`
+
+Pytest needs to know what package it is running from within, which is why if you just
+run `pytest` from the `same_top_level` it will fail.
+
