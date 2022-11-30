@@ -55,3 +55,11 @@ Then we have two options to run pytest:
 Pytest needs to know what package it is running from within, which is why if you just
 run `pytest` from the `same_top_level` it will fail.
 
+#### Using absolute imports in app
+
+In general absolute imports are preferred, they tend to cause less problems.
+We can use absolute imports even with the app structure.
+
+We just change the import to: `from app.src.func1 import function1`
+
+
